@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>QLola by BRI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Container utama (memaksimalkan tampilan seperti HP di desktop) -->
+    <div class="app-container">
+        
+        <!-- Header dengan Background Gedung -->
+        <header class="header">
+            <div class="header-top">
+                <div class="menu-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </div>
+                <div class="lang-selector">
+                    ID
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <!-- Konten Utama (Kartu Putih Melengkung) -->
+        <main class="main-content">
+            <!-- Logo QLola (SVG Replika) -->
+            <div class="logo-wrapper">
+                <svg viewBox="0 0 200 70" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 30 C15 12, 35 12, 45 12 C55 12, 60 18, 60 30 C60 42, 55 48, 45 48 L25 48 L38 60 L30 66 L10 44 Z" fill="none" stroke="#00529C" stroke-width="8" stroke-linejoin="round"/>
+                    <text x="70" y="42" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#00529C" letter-spacing="-2">lola</text>
+                    <text x="98" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00529C">by BRI</text>
+                </svg>
+            </div>
+
+            <h1 class="title">Pertumbuhan bisnis Anda<br>dimulai di sini</h1>
+
+            <!-- Form Login -->
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="corpId" placeholder="Masukkan Corporate ID Anda" autocomplete="off" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="userId" placeholder="Masukkan User ID Anda" autocomplete="off" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Kata Sandi" required>
+                    <button type="button" class="toggle-pwd" id="togglePwd">
+                        <!-- Ikon Mata -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00529C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="forgot-wrapper">
+                    <a href="#" class="forgot-link">Lupa Kata Sandi?</a>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" id="btnMasuk" class="btn btn-primary" disabled>Masuk</button>
+                    <button type="button" class="btn btn-outline">Daftar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Tombol Bantuan Melayang -->
+        <div class="fab-help">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h4v-8H5v-1c0-3.87 3.13-7 7-7s7 3.13 7 7v1h-4v8h4c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9z"/>
+            </svg>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

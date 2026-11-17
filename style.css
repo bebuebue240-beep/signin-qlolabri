@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container meniru layar HP */
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Background Gedung */
+.header {
+    height: 220px;
+    background-image: linear-gradient(rgba(0, 82, 156, 0.1), rgba(0, 82, 156, 0.05)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding: 24px 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+}
+
+/* Kartu Putih Utama */
+.main-content {
+    background-color: #ffffff;
+    border-radius: 32px 32px 0 0;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
+    padding: 30px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-wrapper {
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 36px;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #d1d5db;
+    padding: 8px 0;
+    font-size: 15px;
+    color: #1a1a1a;
+    background: transparent;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #9ca3af;
+}
+
+.input-group input:focus {
+    border-bottom: 1.5px solid #00529C;
+}
+
+.toggle-pwd {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.forgot-wrapper {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.forgot-link {
+    color: #00529C;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Tombol Masuk (Disabled / Enabled) */
+.btn-primary {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border: none;
+    cursor: not-allowed;
+}
+
+.btn-primary.active {
+    background-color: #00529C;
+    color: white;
+    cursor: pointer;
+}
+
+/* Tombol Daftar */
+.btn-outline {
+    background-color: transparent;
+    color: #00529C;
+    border: 1px solid #00529C;
+}
+
+.btn-outline:active {
+    background-color: #f0f7ff;
+}
+
+/* FAB Bantuan */
+.fab-help {
+    position: fixed;
+    bottom: 24px;
+    right: calc(50% - 220px); /* Agar tetap di dalam container pada desktop */
+    transform: translateX(50%);
+    width: 56px;
+    height: 56px;
+    background-color: #00529C;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 82, 156, 0.3);
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 480px) {
+    .fab-help {
+        right: 24px;
+        transform: none;
+    }
+}
